@@ -16,4 +16,4 @@ Use live at http://www/eludev.fr/farsi
 + Eclipse Public License 1.0, for Clojurescript
 + MIT, for Reagent
 + BSD, for React
-+ Eclipse Public License, for the present software
++ MIT, for the present software
