@@ -9,7 +9,7 @@ Refer to the tables of correspondence to type the desired chars.
 
 After a time this will become quite natural, and you will no longer need to refer to the tables.
 
-Use live at http://www/eludev.fr/farsi
+Use live at http://www.eludev.fr/farsi
 
 ## License
 
