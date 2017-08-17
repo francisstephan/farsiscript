@@ -35,12 +35,12 @@
                   "?" "\u061F",
                   "," "\u060C",
                   "$" "\u0651", ; shadda
-                  " " " ", "_" "",
+                   "_" "", ; filter "_"
                   "0" "\u06F0", "1" "\u06F1", "2" "\u06F2","3" "\u06F3", "4" "\u06F4", ; numbers should remain at
                   "5" "\u06F5", "6" "\u06F6", "7" "\u06F7","8" "\u06F8", "9" "\u06F9"  ; the end of the map
                   })
 
-(def lat-far_ {"a" "\u0622","i" "إ", "t" "\u062b", "d" "\u0630", "r" "\u0698" , "s" "\u0634", "g" "\u063a", "y" "\u0649", "j" "ژ" })
+(def lat-far_ {"a" "\u0622","i" "إ", "t" "\u062b", "d" "\u0630", "r" "\u0698" , "s" "\u0634", "g" "\u063a", "y" "\u0649", "j" "ژ", "_" "" }); filter "_"
 
 (def lastcar (atom ""))
 
@@ -57,4 +57,5 @@
       (subst c lat-far))))
 
 (defn transl [s]
-  (reduce str "" (map  subst_ s)))
+  ;(reduce str "" (map  subst_ s)))
+  (transduce (map subst_) str s))
