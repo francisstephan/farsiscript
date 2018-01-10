@@ -2,7 +2,6 @@
 
 An easy way to use your latin keyboard to type in farsi script.
 Developed with Clojurescript and Reagent, using React.
-Developed using the lein reagent-frontend template (https://github.com/reagent-project/reagent-frontend-template)
 
 ## Usage
 
@@ -10,7 +9,7 @@ Refer to the tables of correspondence to type the desired chars.
 
 After a time this will become quite natural, and you will no longer need to refer to the tables.
 
-See live at http://www/eludev.fr/farsi
+Use live at http://www.eludev.fr/farsi
 
 ## License
 

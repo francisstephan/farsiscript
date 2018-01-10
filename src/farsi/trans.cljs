@@ -40,7 +40,7 @@
                   "5" "\u06F5", "6" "\u06F6", "7" "\u06F7","8" "\u06F8", "9" "\u06F9"  ; the end of the map
                   })
 
-(def lat-far_ {"a" "\u0622","i" "إ", "t" "\u062b", "d" "\u0630", "r" "\u0698" , "s" "\u0634", "g" "\u063a", "y" "\u0649", "j" "ژ", "_" "" }); filter "_"
+(def lat-far_ {"a" "\u0622","e" "\u0629", "i" "إ", "t" "\u062b", "d" "\u0630", "r" "\u0698" , "s" "\u0634", "g" "\u063a", "y" "\u0649", "j" "ژ", "_" "" }); filter "_"
 
 (def lastcar (atom ""))
 
@@ -52,10 +52,12 @@
 (defn subst_ [c]
   (let [prec @lastcar]
     (reset! lastcar c)
-    (if (= prec "_")
-      (subst c lat-far_)
-      (subst c lat-far))))
+      (if (= prec "_")
+        (subst c lat-far_)
+        (subst c lat-far))))
 
 (defn transl [s]
   ;(reduce str "" (map  subst_ s)))
-  (transduce (map subst_) str s))
+  (do
+    (reset! lastcar "")
+    (transduce (map subst_) str s)))
